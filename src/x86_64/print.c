@@ -30,6 +30,19 @@ void print_clear() {
     }
 }
 
+void backspace() {
+
+    col--;
+    
+    buffer[col + NUM_COLS * row] = (struct Char) {
+        character: ' ',
+        color: color,
+    };
+
+    
+    
+}
+
 void print_newline() {
     col = 0;
 

@@ -49,7 +49,11 @@ void test_input()
     keycode = get_input_keycode();
     if(keycode == KEY_ENTER){
       print_newline();
-    }else{
+    }
+    if(keycode == KEY_BACKSPACE){
+      backspace();
+    }
+    else{
       ch = get_ascii_char(keycode);
       print_char(ch);
     }
