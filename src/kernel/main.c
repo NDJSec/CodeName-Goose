@@ -12,6 +12,4 @@ void kernel_main()
     print_newline();
 
     test_input();
-
-    
 }

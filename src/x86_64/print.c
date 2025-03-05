@@ -24,26 +24,23 @@ void clear_row(size_t row) {
     }
 }
 
-void print_clear() {
+void print_clear(void) {
     for (size_t i = 0; i < NUM_ROWS; i++) {
         clear_row(i);
     }
 }
 
-void backspace() {
-
+void backspace(void) {
     col--;
     
     buffer[col + NUM_COLS * row] = (struct Char) {
         character: ' ',
         color: color,
     };
-
-    
     
 }
 
-void print_newline() {
+void print_newline(void) {
     col = 0;
 
     if (row < NUM_ROWS - 1) {

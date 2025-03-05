@@ -10,3 +10,7 @@ RUN apt-get install -y grub-common
 VOLUME [ "/root/env" ]
 WORKDIR /root/env
 
+COPY . /root/env
+
+CMD ["make", "build-x86_64"]
+
